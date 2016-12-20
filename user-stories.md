@@ -4,9 +4,9 @@ As a user, I want to be able to start a new game.
 
 As a user, I want to be able to enter my name to make it more personal.
 
-As a user, I want to see how much money I can bet per hand.
+As a user, I want to see how much money I have.
 
-As a user, I want to see what options I have to play.
+As a user, I want to be able to bet money each hand I play in different increments.
 
 As a user, I want to to be able to get additional cards to make 21, or hold onto what I have.
 
