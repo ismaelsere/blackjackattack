@@ -1,17 +1,38 @@
 h1  {
-  color: green;
+  color: white;
   text-align: center;
 }
 
-h2 {
-  color: blue;
-  text-align: center;
+body {
+  background-color: #621610;
 }
 
 #gameBoard {
-  background-color: rgba(33,201,39,1);
+  background-color: rgba(25, 129, 29, 1);
   height: 575px;
   width: 1100px;
   margin: auto;
-  border: 8px solid #9E6B0A;
+  border: 8px solid #E39B24;
+  border-radius: 25px;
+}
+
+.participant {
+  color: #00FFFF;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#player {
+  position: relative;
+  top: 430px;
+}
+
+.buttonPress {
+  position: relative;
+  top: 425px;
+  left: 440px;
+  text-align: center;
+  margin-right: 30px;
+  width: 50px;
+  line-height: 20px;
 }
