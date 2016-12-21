@@ -5,7 +5,15 @@ body {
 h1  {
   color: white;
   text-align: center;
-  margin: 10px;
+  margin: 10px 0px 0px 0px;
+}
+
+#newGame {
+  text-align: center;
+  margin-right: 30px;
+  width: 75px;
+  line-height: 20px;
+  margin: 0px 0px 4px 75px;
 }
 
 #gameBoard {
