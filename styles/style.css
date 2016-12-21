@@ -85,3 +85,20 @@ h1  {
 #money {
 
 }
+
+img {
+  height: 200px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+#cardsImg {
+  position: relative;
+  top: -455px;
+}
+
+#chipsImg {
+  position: relative;
+  top: -80px;
+  left: 595px;
+}
