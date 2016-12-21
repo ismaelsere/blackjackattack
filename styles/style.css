@@ -25,15 +25,39 @@ h1  {
 
 #player {
   position: relative;
-  top: 430px;
+  top: 250px;
 }
 
 .buttonPress {
   position: relative;
-  top: 425px;
-  left: 440px;
+  top: 175px;
+  left: 280px;
   text-align: center;
   margin-right: 30px;
   width: 50px;
   line-height: 20px;
+}
+
+.dealerCards {
+  height: 100px;
+  width: 75px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: relative;
+  top: 0px;
+  left: 470px;
+  display: inline-block;
+}
+
+.playerCards {
+  height: 100px;
+  width: 75px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: relative;
+  top: 75px;
+  left: 470px;
+  display: inline-block;
 }
