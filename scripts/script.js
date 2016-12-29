@@ -24,7 +24,9 @@ const Gameplay = {
   },
   //Function to initiate deck shuffle and initiate game
   start: function() {
-
+    Gameplay.shuffle(Gameplay.deck);
+    Gameplay.bet();
+    Gameplay.dealCards();
   },
 
   //Function to allow player to place bet, subtracting from bank roll
