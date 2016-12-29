@@ -36,13 +36,23 @@ h1  {
   top: 250px;
 }
 
-.buttonPress {
+.buttonPlayer {
   position: relative;
   top: 145px;
-  left: 270px;
+  left: 320px;
   text-align: center;
-  margin-right: 30px;
+  margin-right: 15px;
   width: 50px;
+  line-height: 20px;
+}
+
+.buttonBet {
+  position: relative;
+  top: 0px;
+  left: 1px;
+  text-align: center;
+  margin-right: 4px;
+  width: 60px;
   line-height: 20px;
 }
 
@@ -71,15 +81,15 @@ h1  {
 }
 
 #bank {
-  height: 100px;
-  width: 150px;
+  height: 130px;
+  width: 215px;
   background-color: white;
   border: 1px solid black;
   text-align: center;
   border-radius: 10px;
   position: relative;
-  top: 0px;
-  left: 200px;
+  top: -45px;
+  left: 115px;
 }
 
 #money {
@@ -94,11 +104,11 @@ img {
 
 #cardsImg {
   position: relative;
-  top: -475px;
+  top: -505px;
 }
 
 #chipsImg {
   position: relative;
-  top: -100px;
+  top: -130px;
   left: 596px;
 }
