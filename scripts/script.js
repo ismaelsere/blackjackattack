@@ -3,8 +3,8 @@ $(document).ready(function() {
   console.log('Ready to try your luck?');
 
 //Code for New Game Event
-var $beginGameButton = $('newGame');
-$beginGameButton.on("click", Gameplay.start);
+var $beginGameButton = $('#newGame');
+$beginGameButton.on("click", Gameplay.resetGame);
 
 //Pop up window for Player name entry Event
 //Code to append player name to Bank Roll
@@ -19,21 +19,21 @@ const Gameplay = {
   //Shuffle function
   //Citation: Borrowed code from Marc's jQuery memory game solution
   shuffle: function(arr) {
-    for(var j, x, i = arr.length; i; j = Math.floor(Math.random() * i), x = arr[--i], arr[i] = arr[j], a[j] = x);
+    for(var j, x, i = arr.length; i; j = Math.floor(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
     return arr;
   },
-  //Function to initiate deck shuffle and initiate game
-  start: function() {
-    console.log('Shuffling Deck');
-    Gameplay.shuffle(Gameplay.deck);
-    Gameplay.bet();
-    Gameplay.dealCards();
+  //Function to reset game by bringing Bank Roll back to original amount and clearing the board.
+  resetGame: function() {
+    console.log('Starting over!')
   },
 
   //Function to allow player to place bet, subtracting from bank roll
   //Will also add to bank roll if player wins hand
   bet: function() {
-
+    console.log('Shuffling Deck');
+    Gameplay.shuffle(Gameplay.deck);
+    Gameplay.bet();
+    Gameplay.dealCards();
   },
 
   //Once bet is placed, this function will call first 4 cards in shuffled array
