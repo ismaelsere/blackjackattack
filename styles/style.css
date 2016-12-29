@@ -46,16 +46,6 @@ h1  {
   line-height: 20px;
 }
 
-.buttonBet {
-  position: relative;
-  top: 0px;
-  left: 1px;
-  text-align: center;
-  margin-right: 4px;
-  width: 60px;
-  line-height: 20px;
-}
-
 .dealerCards {
   height: 110px;
   width: 80px;
@@ -94,6 +84,29 @@ h1  {
 
 #money {
 
+}
+
+.buttonBet {
+  position: relative;
+  top: 0px;
+  left: 1px;
+  text-align: center;
+  margin-right: 4px;
+  width: 60px;
+  line-height: 20px;
+  color: white;
+}
+
+#betOne {
+  background-color: red;
+}
+
+#betTwo {
+  background-color: blue;
+}
+
+#betThree {
+  background-color: black;
 }
 
 img {
