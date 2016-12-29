@@ -13,7 +13,7 @@ h1  {
   margin-right: 30px;
   width: 75px;
   line-height: 20px;
-  margin: 0px 0px 4px 75px;
+  margin: 0px 0px 4px 95px;
 }
 
 #gameBoard {
@@ -38,8 +38,8 @@ h1  {
 
 .buttonPress {
   position: relative;
-  top: 175px;
-  left: 280px;
+  top: 145px;
+  left: 270px;
   text-align: center;
   margin-right: 30px;
   width: 50px;
@@ -47,26 +47,26 @@ h1  {
 }
 
 .dealerCards {
-  height: 100px;
-  width: 75px;
+  height: 110px;
+  width: 80px;
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
   position: relative;
   top: 0px;
-  left: 470px;
+  left: 465px;
   display: inline-block;
 }
 
 .playerCards {
-  height: 100px;
-  width: 75px;
+  height: 110px;
+  width: 80px;
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
   position: relative;
   top: 75px;
-  left: 470px;
+  left: 465px;
   display: inline-block;
 }
 
@@ -94,11 +94,11 @@ img {
 
 #cardsImg {
   position: relative;
-  top: -455px;
+  top: -475px;
 }
 
 #chipsImg {
   position: relative;
-  top: -80px;
-  left: 595px;
+  top: -100px;
+  left: 596px;
 }
