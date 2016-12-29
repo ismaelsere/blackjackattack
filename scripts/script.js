@@ -3,8 +3,8 @@ $(document).ready(function() {
   console.log('Ready to try your luck?');
 
 //Code for New Game Event
-var $startButton = $('newGame');
-$startButton.on("click", Gameplay.start);
+var $beginGameButton = $('newGame');
+$beginGameButton.on("click", Gameplay.start);
 
 //Pop up window for Player name entry Event
 //Code to append player name to Bank Roll
@@ -24,6 +24,7 @@ const Gameplay = {
   },
   //Function to initiate deck shuffle and initiate game
   start: function() {
+    console.log('Shuffling Deck');
     Gameplay.shuffle(Gameplay.deck);
     Gameplay.bet();
     Gameplay.dealCards();
