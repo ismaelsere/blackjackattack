@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 //Code for New Game Event
 var $startButton = $('newGame');
-$startButton.on("click", game.start);
+$startButton.on("click", Gameplay.start);
 
 //Pop up window for Player name entry Event
 //Code to append player name to Bank Roll
@@ -12,7 +12,7 @@ $startButton.on("click", game.start);
 });
 
 //Begin game object for Blackjack Attack
-var game = {
+const Gameplay = {
 //Array of deck of cards
 //For testing purposes, only one suit will be included in deck
   deck: [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace'],
@@ -52,4 +52,14 @@ var game = {
   },
 
 //End of game object
+};
+
+//How the board changes based on Gameplay
+const BoardEffect = {
+
+};
+
+//Player control of board's features
+const Controller = {
+
 };
