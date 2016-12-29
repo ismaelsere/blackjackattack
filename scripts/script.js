@@ -17,8 +17,10 @@ const Gameplay = {
 //For testing purposes, only one suit will be included in deck
   deck: [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace'],
   //Shuffle function
+  //Citation: Borrowed code from Marc's jQuery memory game solution
   shuffle: function(arr) {
-
+    for(var j, x, i = arr.length; i; j = Math.floor(Math.random() * i), x = arr[--i], arr[i] = arr[j], a[j] = x);
+    return arr;
   },
   //Function to initiate deck shuffle and initiate game
   start: function() {
