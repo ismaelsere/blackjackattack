@@ -11,9 +11,45 @@ $startButton.on("click", game.start);
 
 });
 
-//This is the game object for Blackjack Attack
+//Begin game object for Blackjack Attack
 var game = {
 //Array of deck of cards
+//For testing purposes, only one suit will be included in deck
   deck: [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace'],
-  
-}
+  //Shuffle function
+  shuffle: function(arr) {
+
+  },
+  //Function to initiate deck shuffle and initiate game
+  start: function() {
+
+  },
+
+  //Function to allow player to place bet, subtracting from bank roll
+  //Will also add to bank roll if player wins hand
+  bet: function() {
+
+  },
+
+  //Once bet is placed, this function will call first 4 cards in shuffled array
+  dealCards: function() {
+
+  },
+
+  //This function will check to see if player card total is 21. If card total is over 21, player/dealer will "bust".
+  checkForVictory: function() {
+
+  },
+
+  //If cards do not equal 21, player will call this function to deal next card value in array
+  hit: function() {
+
+  },
+
+  //If player wishes to hold, this function will end player turn and begin dealer turn
+  hold: function() {
+
+  },
+
+//End of game object
+};
