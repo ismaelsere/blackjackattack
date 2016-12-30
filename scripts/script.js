@@ -3,13 +3,12 @@ $(document).ready(function() {
   console.log('Ready to try your luck?');
 
 //Code for New Game Event
-var $beginGameButton = $('#newGame');
-$beginGameButton.on("click", Gameplay.resetGame);
-
-//Pop up window for Player name entry Event
-//Code to append player name to Bank Roll
-
-
+  $('#newGame').click(function() {
+    var $firstName = prompt("Please enter your name");
+    $('h3').text($firstName + 's Bankroll');
+    var $beginGameButton = $('#newGame');
+    $beginGameButton.on("click", Gameplay.resetGame);
+  })
 });
 
 //Begin game object for Blackjack Attack
