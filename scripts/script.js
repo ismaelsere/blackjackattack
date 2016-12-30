@@ -17,7 +17,7 @@ const Gameplay = {
 //For testing purposes, only one suit will be included in deck
 //For testing, face cards will be replaced by their numerical values
 //                                   J   Q   K   A
-  deck: [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11],
+  cards: [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11],
   //Shuffle function
   //Citation: Borrowed code from Marc's jQuery memory game solution
   shuffle: function(arr) {
@@ -35,7 +35,7 @@ const Gameplay = {
   //Function to allow player to place bet, subtracting from bank roll
   //Will also add to bank roll if player wins hand
   bet: function() {
-    Gameplay.shuffle(Gameplay.deck);
+    Gameplay.shuffle(Gameplay.cards);
 
 
 
