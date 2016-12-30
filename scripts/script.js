@@ -44,6 +44,13 @@ const Gameplay = {
 
   //Once bet is placed, this function will call first 4 cards in shuffled array
   dealCards: function() {
+    //At the beginning of each hand, each card will have it's html cleared
+    //To simulate real blackjack, cards dealt will be alternated to diversify odds
+    $('#playerCardOne').html("");
+    $('#dealerCardOne').html("");
+    $('#playerCardTwo').html("");
+    $('#dealerCardTwo').html("");
+
 
   },
 
