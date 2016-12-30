@@ -9,6 +9,7 @@ $beginGameButton.on("click", Gameplay.resetGame);
 //Pop up window for Player name entry Event
 //Code to append player name to Bank Roll
 
+
 });
 
 //Begin game object for Blackjack Attack
@@ -25,6 +26,8 @@ const Gameplay = {
   //Function to reset game by bringing Bank Roll back to original amount and clearing the board.
   resetGame: function() {
     console.log('Starting over!')
+    //line of code to bring bank roll <p> back to $1,000.
+    //code to remove any cards in play
   },
 
   //Function to allow player to place bet, subtracting from bank roll
@@ -32,7 +35,9 @@ const Gameplay = {
   bet: function() {
     console.log('Shuffling Deck');
     Gameplay.shuffle(Gameplay.deck);
-    Gameplay.bet();
+
+
+
     Gameplay.dealCards();
   },
 
