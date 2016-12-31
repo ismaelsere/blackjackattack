@@ -8,6 +8,12 @@ h1  {
   margin: 10px 0px 0px 0px;
 }
 
+img {
+  height: 200px;
+  width: 250px;
+  border-radius: 10px;
+}
+
 #newGame {
   text-align: center;
   margin-right: 30px;
@@ -86,6 +92,8 @@ h1  {
   width: 60px;
   line-height: 20px;
   color: white;
+  border: 2px dotted white;
+  border-radius: 14px;
 }
 
 #bet25 {
@@ -139,12 +147,9 @@ h1  {
   width: 50px;
   line-height: 20px;
   font-weight: bold;
-}
-
-img {
-  height: 200px;
-  width: 250px;
-  border-radius: 10px;
+  background-color: red;
+  color: white;
+  border-color: white;
 }
 
 #chipsImg {
