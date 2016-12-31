@@ -85,19 +85,19 @@ const BoardEffect = {
 
 //Player control of board's features and in-game events
 const Controller = {
-  betTwentyFive: function(event) {
-    var bankroll = 1000;
+  betTwentyFive: function() {
+    var bankRoll = $('#bankRoll').html();
     var twentyFive = 25;
-    $('#money').html('$' + (bankroll - twentyFive));
+    $('#bankRoll').html(bankRoll - twentyFive);
   },
-  betFifty: function(event) {
-    var bankroll = 1000;
+  betFifty: function() {
+    var bankRoll = $('#bankRoll').html();
     var fifty = 50;
-    $('#money').html('$' + (bankroll - fifty));
+    $('#bankRoll').html(bankRoll - fifty);
   },
-  betOneHundred: function(event) {
-    var bankroll = 1000;
+  betOneHundred: function() {
+    var bankRoll = $('#bankRoll').html();
     var oneHundred = 100;
-    $('#money').html('$' + (bankroll - oneHundred));
+    $('#bankRoll').html(bankRoll - oneHundred);
   }
 };
