@@ -67,8 +67,8 @@ h1  {
   text-align: center;
   border-radius: 10px;
   position: relative;
-  top: 0px;
-  left: 75px;
+  top: -35px;
+  left: 40px;
 }
 
 /* Below selector is a placeholder in case I want to style my p tag */
@@ -106,7 +106,6 @@ h1  {
   position: relative;
   top: -225px;
   left: 335px;
-  border: 1px solid black;
 }
 
 #player {
@@ -124,13 +123,15 @@ h1  {
 }
 
 .buttonArea {
-
+  height: 25px;
+  width: 135px;
+  position: relative;
+  top: -255px;
+  left: 495px;
 }
 
 .buttonPlayer {
   position: relative;
-  top: -10px;
-  left: 15px;
   text-align: center;
   margin-right: 15px;
   width: 50px;
@@ -146,6 +147,6 @@ img {
 
 #chipsImg {
   position: relative;
-  top: -130px;
-  left: 596px;
+  top: -446px;
+  left: 850px;
 }
