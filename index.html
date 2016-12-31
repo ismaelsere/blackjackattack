@@ -11,22 +11,31 @@
     <h1>Blackjack Attack!</h1>
     <button id="newGame">New Game</button>
     <div id="gameBoard" class="board">
-      <h2 id="dealer" class ="participant">Dealer</h2>
-        <div class="dealerCards" id="dealerCardOne"></div>
-        <div class="dealerCards" id="dealerCardTwo"></div>
-      <h2 id="player" class ="participant">Player</h2>
-        <div class="playerCards" id="playerCardOne"></div>
-        <div class="playerCards" id="playerCardTwo"></div>
+      <img src="images/cards.jpg" alt="Playing Cards" id="cardsImg">
+      <div class="dealerArea">
+          <h2 id="dealer" class ="participant">Dealer</h2>
+          <div class="dealerCards" id="dealerCardOne"></div>
+          <div class="dealerCards" id="dealerCardTwo"></div>
+      </div>
+      <div id="bank">
+        <h3 id="playerName">Bank Roll</h3>
+        <p id="money">$<span id="bankRoll">1000</span></p>
+        <button class ="buttonBet" id="bet25">Bet 25!</button>
+        <button class ="buttonBet" id="bet50">Bet 50!</button>
+        <button class ="buttonBet" id="bet100">Bet 100!</button>
+      </div>
+      <div class="playerArea">
+          <h2 id="player" class ="participant">Player</h2>
+          <div class="playerCards" id="playerCardOne"></div>
+          <div class="playerCards" id="playerCardTwo"></div>
+          <!-- <div class="playerCards" id="playerCardThree"></div>
+          <div class="playerCards" id="playerCardFour"></div>
+          <div class="playerCards" id="playerCardFive"></div> -->
+      </div>
+      <div class="buttonArea">
         <button class ="buttonPlayer" id="hit">Hit!</button>
         <button class ="buttonPlayer" id="hold">Hold!</button>
-        <div id="bank">
-          <h3 id="playerName">Bank Roll</h3>
-          <p id="money">$<span id="bankRoll">1000</span></p>
-          <button class ="buttonBet" id="bet25">Bet 25!</button>
-          <button class ="buttonBet" id="bet50">Bet 50!</button>
-          <button class ="buttonBet" id="bet100">Bet 100!</button>
-        </div>
-      <img src="images/cards.jpg" alt="Playing Cards" id="cardsImg">
+      </div>
       <img src="images/chips.jpg" alt="Playing Cards" id="chipsImg">
     </div>
     <script src="scripts/script.js"></script>

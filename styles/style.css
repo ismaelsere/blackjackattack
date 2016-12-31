@@ -31,20 +31,23 @@ h1  {
   text-decoration: underline;
 }
 
-#player {
+#cardsImg {
   position: relative;
-  top: 250px;
+  top: 0px;
 }
 
-.buttonPlayer {
-  position: relative;
-  top: 145px;
-  left: 320px;
+.dealerArea {
+  height: 210px;
+  width: 440px;
   text-align: center;
-  margin-right: 15px;
-  width: 50px;
-  line-height: 20px;
-  font-weight: bold;
+  position: relative;
+  top: 0px;
+  left: 335px;
+}
+
+#dealer {
+  position: relative;
+  top: 0px;
 }
 
 .dealerCards {
@@ -53,10 +56,21 @@ h1  {
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
+  float: left;
+}
+
+.playerArea {
+  height: 210px;
+  width: 440px;
+  text-align: center;
   position: relative;
-  top: 0px;
-  left: 465px;
-  display: inline-block;
+  top: 175px;
+  left: 335px;
+}
+
+#player {
+  position: relative;
+  top: -20px;
 }
 
 .playerCards {
@@ -65,10 +79,18 @@ h1  {
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
+  float: left;
+}
+
+.buttonPlayer {
   position: relative;
-  top: 75px;
-  left: 465px;
-  display: inline-block;
+  top: -10px;
+  left: 15px;
+  text-align: center;
+  margin-right: 15px;
+  width: 50px;
+  line-height: 20px;
+  font-weight: bold;
 }
 
 #bank {
@@ -115,11 +137,6 @@ img {
   height: 200px;
   width: 250px;
   border-radius: 10px;
-}
-
-#cardsImg {
-  position: relative;
-  top: -505px;
 }
 
 #chipsImg {
