@@ -83,6 +83,7 @@ h1  {
   left: 75px;
 }
 
+/* Below selector is a placeholder in case I want to style my p tag */
 #money {
 
 }
@@ -98,15 +99,15 @@ h1  {
   color: white;
 }
 
-#betOne {
+#bet25 {
   background-color: green;
 }
 
-#betTwo {
+#bet50 {
   background-color: blue;
 }
 
-#betThree {
+#bet100 {
   background-color: black;
 }
 

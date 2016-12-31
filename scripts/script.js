@@ -21,7 +21,7 @@ const Gameplay = {
   //Citation: Borrowed code from Marc's jQuery memory game solution
   shuffle: function(arr) {
     for(var j, x, i = arr.length; i; j = Math.floor(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
-    console.log('Shuffling Deck');
+    console.log('Shuffling Cards');
     return arr;
   },
   //Function to reset game by bringing Bank Roll back to original amount and clearing the board.
@@ -37,7 +37,7 @@ const Gameplay = {
   //Function to allow player to place bet, subtracting from bank roll
   //Will also add to bank roll if player wins hand
   bet: function() {
-    Gameplay.shuffle(Gameplay.cards);
+
 
 
 
@@ -53,6 +53,10 @@ const Gameplay = {
     $('#playerCardTwo').html("");
     $('#dealerCardTwo').html("");
 
+    //Shuffle the array before each hand
+    Gameplay.shuffle(Gameplay.cards);
+
+    //Assigning Card Images to Card Values
 
   },
 
