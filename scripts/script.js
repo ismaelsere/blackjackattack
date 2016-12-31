@@ -6,6 +6,7 @@ $(document).ready(function() {
   $('#newGame').click(function() {
     var $firstName = prompt("Please enter your name");
     $('h3').text($firstName + "'s Bankroll").on("click", Gameplay.resetGame);
+    Gameplay.resetGame();
     // var $beginGameButton = $('#newGame');
     // $beginGameButton.on("click", Gameplay.resetGame);
   })
@@ -33,7 +34,6 @@ const Gameplay = {
     $('#playerCardTwo').html("");
     $('#dealerCardTwo').html("");
     console.log('Starting over!')
-    //code to remove any cards in play
   },
 
   //Function to allow player to place bet, subtracting from bank roll
