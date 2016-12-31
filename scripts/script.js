@@ -10,17 +10,6 @@ $(document).ready(function() {
   })
 });
 
-//Bet Button Controls
-$('#bet25').click(function() {
-  Controller.betTwentyFive();
-});
-$('#bet50').click(function() {
-  Controller.betFifty();
-});
-$('#bet100').click(function() {
-  Controller.betOneHundred();
-});
-
 //Begin game object for Blackjack Attack
 const Gameplay = {
 //Array of deck of cards
@@ -37,7 +26,7 @@ const Gameplay = {
   },
   //Function to reset game by bringing Bank Roll back to original amount and clearing the board.
   resetGame: function() {
-    $('#money').html("$1000");
+    $('#bankRoll').html("1000");
     $('#playerCardOne').html("");
     $('#dealerCardOne').html("");
     $('#playerCardTwo').html("");
@@ -111,3 +100,14 @@ const Controller = {
     $('#bankRoll').html(bankRoll - oneHundred);
   }
 };
+
+//Bet Button Controls
+$('#bet25').click(function() {
+  Controller.betTwentyFive();
+});
+$('#bet50').click(function() {
+  Controller.betFifty();
+});
+$('#bet100').click(function() {
+  Controller.betOneHundred();
+});
