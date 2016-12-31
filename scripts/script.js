@@ -31,7 +31,7 @@ const Gameplay = {
     $('#dealerCardOne').html("");
     $('#playerCardTwo').html("");
     $('#dealerCardTwo').html("");
-    console.log('Starting over!')
+    console.log('Welcome!')
   },
 
   //Function to allow player to place bet, subtracting from bank roll
@@ -40,7 +40,7 @@ const Gameplay = {
 
 
 
-    
+
   },
 
   //Once bet is placed, this function will call first 4 cards in shuffled array
@@ -52,9 +52,10 @@ const Gameplay = {
     $('#playerCardTwo').html("");
     $('#dealerCardTwo').html("");
 
-    //Shuffle the array before each hand
-    Gameplay.shuffle(Gameplay.cards);
-
+    $('#playerCardOne').html(Gameplay.cards[0]);
+    $('#dealerCardOne').html(Gameplay.cards[1]);
+    $('#playerCardTwo').html(Gameplay.cards[2]);
+    $('#dealerCardTwo').html(Gameplay.cards[3]);
     //Assigning Card Images to Card Values
 
   },
@@ -104,6 +105,8 @@ const Controller = {
 //Bet Button Controls
 $('#bet25').click(function() {
   Controller.betTwentyFive();
+  Gameplay.shuffle(Gameplay.cards);
+  Gameplay.dealCards();
 });
 $('#bet50').click(function() {
   Controller.betFifty();
