@@ -5,10 +5,8 @@ $(document).ready(function() {
 //Code for New Game Event
   $('#newGame').click(function() {
     var $firstName = prompt("Please enter your name");
-    $('h3').text($firstName + "'s Bankroll").on("click", Gameplay.resetGame);
+    $('h3').text($firstName + "'s Bankroll");
     Gameplay.resetGame();
-    // var $beginGameButton = $('#newGame');
-    // $beginGameButton.on("click", Gameplay.resetGame);
   })
 });
 
