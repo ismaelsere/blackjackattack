@@ -48,6 +48,7 @@ h1  {
 #dealer {
   position: relative;
   top: 10px;
+  right: 15px;
 }
 
 .dealerCards {
@@ -111,6 +112,7 @@ h1  {
 #player {
   position: relative;
   top: 10px;
+  right: 15px;
 }
 
 .playerCards {
@@ -127,7 +129,7 @@ h1  {
   width: 135px;
   position: relative;
   top: -255px;
-  left: 495px;
+  left: 480px;
 }
 
 .buttonPlayer {

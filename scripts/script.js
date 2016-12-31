@@ -31,6 +31,12 @@ const Gameplay = {
     $('#dealerCardOne').html("");
     $('#playerCardTwo').html("");
     $('#dealerCardTwo').html("");
+    $('#playerCardThree').html("");
+    $('#dealerCardThree').html("");
+    $('#playerCardFour').html("");
+    $('#dealerCardFour').html("");
+    $('#playerCardFive').html("");
+    $('#dealerCardFive').html("");
     console.log('Welcome!')
   },
 
@@ -47,15 +53,15 @@ const Gameplay = {
   dealCards: function() {
     //At the beginning of each hand, each card will have it's html cleared
     //To simulate real blackjack, cards dealt will be alternated to diversify odds
-    $('#playerCardOne').html("");
-    $('#dealerCardOne').html("");
-    $('#playerCardTwo').html("");
-    $('#dealerCardTwo').html("");
+    $('#playerCardThree').html("");
+    $('#dealerCardThree').html("");
+    $('#playerCardFour').html("");
+    $('#dealerCardFour').html("");
 
-    $('#playerCardOne').html(Gameplay.cards[0]);
-    $('#dealerCardOne').html(Gameplay.cards[1]);
-    $('#playerCardTwo').html(Gameplay.cards[2]);
-    $('#dealerCardTwo').html(Gameplay.cards[3]);
+    $('#playerCardThree').html(Gameplay.cards[0]);
+    $('#dealerCardThree').html(Gameplay.cards[1]);
+    $('#playerCardFour').html(Gameplay.cards[2]);
+    $('#dealerCardFour').html(Gameplay.cards[3]);
     //Assigning Card Images to Card Values
 
   },
