@@ -41,13 +41,13 @@ h1  {
   width: 440px;
   text-align: center;
   position: relative;
-  top: 0px;
+  top: -205px;
   left: 335px;
 }
 
 #dealer {
   position: relative;
-  top: 0px;
+  top: 10px;
 }
 
 .dealerCards {
@@ -57,40 +57,6 @@ h1  {
   border: 1px solid black;
   border-radius: 10px;
   float: left;
-}
-
-.playerArea {
-  height: 210px;
-  width: 440px;
-  text-align: center;
-  position: relative;
-  top: 175px;
-  left: 335px;
-}
-
-#player {
-  position: relative;
-  top: -20px;
-}
-
-.playerCards {
-  height: 110px;
-  width: 80px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 10px;
-  float: left;
-}
-
-.buttonPlayer {
-  position: relative;
-  top: -10px;
-  left: 15px;
-  text-align: center;
-  margin-right: 15px;
-  width: 50px;
-  line-height: 20px;
-  font-weight: bold;
 }
 
 #bank {
@@ -131,6 +97,45 @@ h1  {
 
 #bet100 {
   background-color: black;
+}
+
+.playerArea {
+  height: 210px;
+  width: 440px;
+  text-align: center;
+  position: relative;
+  top: -225px;
+  left: 335px;
+  border: 1px solid black;
+}
+
+#player {
+  position: relative;
+  top: 10px;
+}
+
+.playerCards {
+  height: 110px;
+  width: 80px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  float: left;
+}
+
+.buttonArea {
+
+}
+
+.buttonPlayer {
+  position: relative;
+  top: -10px;
+  left: 15px;
+  text-align: center;
+  margin-right: 15px;
+  width: 50px;
+  line-height: 20px;
+  font-weight: bold;
 }
 
 img {
