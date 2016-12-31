@@ -16,7 +16,7 @@ const Gameplay = {
 //Array of deck of cards
 //For testing purposes, only one suit will be included in deck
 //For testing, face cards will be replaced by their numerical values
-//                                   J   Q   K   A
+//                                    J   Q   K   A
   cards: [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11],
   //Shuffle function
   //Citation: Borrowed code from Marc's jQuery memory game solution
@@ -27,8 +27,12 @@ const Gameplay = {
   },
   //Function to reset game by bringing Bank Roll back to original amount and clearing the board.
   resetGame: function() {
+    $('#money').html("$1000");
+    $('#playerCardOne').html("");
+    $('#dealerCardOne').html("");
+    $('#playerCardTwo').html("");
+    $('#dealerCardTwo').html("");
     console.log('Starting over!')
-    //line of code to bring bank roll <p> back to $1,000.
     //code to remove any cards in play
   },
 
@@ -77,10 +81,21 @@ const BoardEffect = {
 
 };
 
-//Player control of board's features
+//Player control of board's features and in-game events
 const Controller = {
   betTwentyFive: function(event) {
-    var $twentyFive = $('#money').text() - 25;
-    $('#money').text($twentyFive);
+    var bankroll = 1000;
+    var twentyFive = 25;
+    $('#money').html('$' + (bankroll - twentyFive));
+  },
+  betFifty: function(event) {
+    var bankroll = 1000;
+    var fifty = 50;
+    $('#money').html('$' + (bankroll - fifty));
+  },
+  betOneHundred: function(event) {
+    var bankroll = 1000;
+    var oneHundred = 100;
+    $('#money').html('$' + (bankroll - oneHundred));
   }
 };
