@@ -10,6 +10,17 @@ $(document).ready(function() {
   })
 });
 
+//Bet Button Controls
+$('#bet25').click(function() {
+  Controller.betTwentyFive();
+});
+$('#bet50').click(function() {
+  Controller.betFifty();
+});
+$('#bet100').click(function() {
+  Controller.betOneHundred();
+});
+
 //Begin game object for Blackjack Attack
 const Gameplay = {
 //Array of deck of cards
@@ -37,7 +48,6 @@ const Gameplay = {
   //Function to allow player to place bet, subtracting from bank roll
   //Will also add to bank roll if player wins hand
   bet: function() {
-
 
 
 
