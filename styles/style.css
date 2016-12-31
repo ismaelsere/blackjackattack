@@ -67,7 +67,7 @@ img {
 }
 
 #bank {
-  height: 130px;
+  height: 150px;
   width: 215px;
   background-color: wheat;
   border: 1px solid black;
@@ -80,20 +80,21 @@ img {
 
 /* Below selector is a placeholder in case I want to style my p tag */
 #money {
-
+  font-size: 110%;
 }
 
 .buttonBet {
   position: relative;
-  top: 0px;
-  left: 1px;
+  top: -5px;
+  left: 2px;
   text-align: center;
   margin-right: 4px;
-  width: 60px;
+  width: 50px;
   line-height: 20px;
   color: white;
-  border: 2px dotted white;
-  border-radius: 14px;
+  border: 3px dotted white;
+  border-radius: 24px;
+  font-weight: bold;
 }
 
 #bet25 {
@@ -113,7 +114,7 @@ img {
   width: 440px;
   text-align: center;
   position: relative;
-  top: -225px;
+  top: -245px;
   left: 335px;
 }
 
@@ -136,7 +137,7 @@ img {
   height: 25px;
   width: 135px;
   position: relative;
-  top: -255px;
+  top: -275px;
   left: 480px;
 }
 
@@ -154,6 +155,6 @@ img {
 
 #chipsImg {
   position: relative;
-  top: -446px;
+  top: -466px;
   left: 850px;
 }
