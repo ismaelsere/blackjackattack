@@ -40,7 +40,7 @@ const Gameplay = {
 
 
 
-    Gameplay.dealCards();
+    
   },
 
   //Once bet is placed, this function will call first 4 cards in shuffled array
