@@ -116,7 +116,11 @@ $('#bet25').click(function() {
 });
 $('#bet50').click(function() {
   Controller.betFifty();
+  Gameplay.shuffle(Gameplay.cards);
+  Gameplay.dealCards();
 });
 $('#bet100').click(function() {
   Controller.betOneHundred();
+  Gameplay.shuffle(Gameplay.cards);
+  Gameplay.dealCards();
 });
