@@ -75,26 +75,36 @@ const Gameplay = {
   //If cards do not equal 21, player will call this function to deal next card value in array
   hit: function() {
     // var playerCards = Gameplay.cards[0] + Gameplay.cards[2]
-    if (Gameplay.cards[0] + Gameplay.cards[2] < 21) {
+    if (Gameplay.cards[0] + Gameplay.cards[2] < 20) {
       $('#playerCardThree').html(Gameplay.cards[4]);
       $('#playerCardThree').removeClass("hidden");
-    } if ((Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4]) < 21) {
+    } else if ((Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4]) < 21) {
       $('#playerCardFour').html(Gameplay.cards[5]);
       $('#playerCardFour').removeClass("hidden");
-    } if ((Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4] + Gameplay.cards[5]) < 21) {
+    } else if ((Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4] + Gameplay.cards[5]) < 21) {
       $('#playerCardFive').html(Gameplay.cards[6]);
       $('#playerCardFive').removeClass("hidden");
+    } else {
+      Gameplay.hold();
+    };
+  },
+
+  //If player wishes to hold, this function will end player turn and begin dealer turn.
+  hold: function() {
+    if (Gameplay.cards[1] + Gameplay.cards[3] < 20) {
+      $('#dealerCardThree').html(Gameplay.cards[7]);
+      $('#dealerCardThree').removeClass("hidden");
+    } else if ((Gameplay.cards[1] + Gameplay.cards[3] + Gameplay.cards[7]) < 21) {
+      $('#dealerCardFour').html(Gameplay.cards[8]);
+      $('#dealerCardFour').removeClass("hidden");
+    } else if ((Gameplay.cards[1] + Gameplay.cards[3] + Gameplay.cards[7] + Gameplay.cards[8]) < 21) {
+      $('#dealerCardFive').html(Gameplay.cards[9]);
+      $('#dealerCardFive').removeClass("hidden");
     };
   },
 
   //This function will check to see if player card total is 21. If card total is over 21, player/dealer will "bust".
   checkForVictory: function() {
-
-  },
-
-
-  //If player wishes to hold, this function will end player turn and begin dealer turn
-  hold: function() {
 
   },
 
@@ -143,4 +153,7 @@ $('#bet100').click(function() {
 });
 $('#hit').click(function() {
   Gameplay.hit();
+});
+$('#hold').click(function() {
+  Gameplay.hold();
 })
