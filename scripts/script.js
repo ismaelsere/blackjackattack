@@ -57,6 +57,12 @@ const Gameplay = {
     $('#dealerCardOne').html("");
     $('#playerCardTwo').html("");
     $('#dealerCardTwo').html("");
+    $('#playerCardThree').html("").addClass("hidden");
+    $('#dealerCardThree').html("").addClass("hidden");
+    $('#playerCardFour').html("").addClass("hidden");
+    $('#dealerCardFour').html("").addClass("hidden");
+    $('#playerCardFive').html("").addClass("hidden");
+    $('#dealerCardFive').html("").addClass("hidden");
 
     $('#playerCardOne').html(Gameplay.cards[0]);
     $('#dealerCardOne').html(Gameplay.cards[1]);
