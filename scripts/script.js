@@ -74,19 +74,18 @@ const Gameplay = {
 
   //If cards do not equal 21, player will call this function to deal next card value in array
   hit: function() {
-    // var playerCards = Gameplay.cards[0] + Gameplay.cards[2]
-    if (Gameplay.cards[0] + Gameplay.cards[2] < 20) {
+
+    if (Gameplay.cards[0] + Gameplay.cards[2] < 21) {
       $('#playerCardThree').html(Gameplay.cards[4]);
       $('#playerCardThree').removeClass("hidden");
-    } else if ((Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4]) < 21) {
+    } if ((Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4]) < 21) {
       $('#playerCardFour').html(Gameplay.cards[5]);
       $('#playerCardFour').removeClass("hidden");
-    } else if ((Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4] + Gameplay.cards[5]) < 21) {
+    } if ((Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4] + Gameplay.cards[5]) < 21) {
       $('#playerCardFive').html(Gameplay.cards[6]);
       $('#playerCardFive').removeClass("hidden");
-    } else {
-      Gameplay.hold();
     };
+    console.log('Hit!');
   },
 
   //If player wishes to hold, this function will end player turn and begin dealer turn.
@@ -101,6 +100,7 @@ const Gameplay = {
       $('#dealerCardFive').html(Gameplay.cards[9]);
       $('#dealerCardFive').removeClass("hidden");
     };
+    console.log('Hold!');
   },
 
   //This function will check to see if player card total is 21. If card total is over 21, player/dealer will "bust".
