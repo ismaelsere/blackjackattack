@@ -15,8 +15,8 @@ const Gameplay = {
 //Array of deck of cards
 //For testing purposes, only one suit will be included in deck
 //For testing, face cards will be replaced by their numerical values
-//                                    J   Q   K   A
-  cards: [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11],
+//                                    J   Q   K   A                               J   Q   K   A                               J   Q   K   A                               J   Q   K   A
+  cards: [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11],
   //Shuffle function
   //Citation: Borrowed code from Marc's jQuery memory game solution
   shuffle: function(arr) {
