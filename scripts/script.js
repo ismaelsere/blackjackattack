@@ -68,17 +68,17 @@ const Gameplay = {
 
   //If cards do not equal 21, player will call this function to deal next card value in array
   hit: function() {
-    if (Gameplay.cards[0] + Gameplay.cards[1] < 21) {
+    // var playerCards = Gameplay.cards[0] + Gameplay.cards[2]
+    if (Gameplay.cards[0] + Gameplay.cards[2] < 21) {
       $('#playerCardThree').html(Gameplay.cards[4]);
       $('#playerCardThree').removeClass("hidden");
-    } else if ((Gameplay.cards[0] + Gameplay.cards[1] + Gameplay.cards[4]) < 21) {
+    } if ((Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4]) < 21) {
       $('#playerCardFour').html(Gameplay.cards[5]);
       $('#playerCardFour').removeClass("hidden");
+    } if ((Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4] + Gameplay.cards[5]) < 21) {
+      $('#playerCardFive').html(Gameplay.cards[6]);
+      $('#playerCardFive').removeClass("hidden");
     };
-
-
-    // $('#playerCardFive').html(Gameplay.cards[6]);
-    // $('#playerCardFive').removeClass("hidden");
   },
 
   //This function will check to see if player card total is 21. If card total is over 21, player/dealer will "bust".
@@ -119,7 +119,7 @@ const Controller = {
   }
 };
 
-//Bet Button Controls
+//Button Controls
 $('#bet25').click(function() {
   Controller.betTwentyFive();
   Gameplay.shuffle(Gameplay.cards);
