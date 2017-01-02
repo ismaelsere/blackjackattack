@@ -66,15 +66,17 @@ const Gameplay = {
 
   },
 
+  //If cards do not equal 21, player will call this function to deal next card value in array
+  hit: function() {
+    $('#playerCardThree').html(Gameplay.cards[4]);
+    $('#playerCardThree').removeClass("hidden");
+  },
+
   //This function will check to see if player card total is 21. If card total is over 21, player/dealer will "bust".
   checkForVictory: function() {
 
   },
 
-  //If cards do not equal 21, player will call this function to deal next card value in array
-  hit: function() {
-
-  },
 
   //If player wishes to hold, this function will end player turn and begin dealer turn
   hold: function() {
@@ -124,3 +126,6 @@ $('#bet100').click(function() {
   Gameplay.shuffle(Gameplay.cards);
   Gameplay.dealCards();
 });
+$('#hit').click(function() {
+  Gameplay.hit();
+})
