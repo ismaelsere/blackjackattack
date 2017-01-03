@@ -193,11 +193,6 @@ const BoardEffect = {
 
 };
 
-//Player control of board's features and in-game events
-const Controller = {
-
-};
-
 //Button Controls
 $('#bet25').click(function() {
   Gameplay.betTwentyFive();
