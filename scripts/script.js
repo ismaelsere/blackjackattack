@@ -66,6 +66,22 @@ const Gameplay = {
     $('#bankRoll').html(bankRoll - oneHundred);
   },
 
+  winTwentyFive: function () {
+    var bankRoll = $('#bankRoll').html();
+    var twentyFive = 25;
+    $('#bankRoll').html(bankRoll + twentyFive);
+  },
+  winFifty: function () {
+    var bankRoll = $('#bankRoll').html();
+    var fifty = 50;
+    $('#bankRoll').html(bankRoll + fifty);
+  },
+  winOneHundred: function() {
+    var bankRoll = $('#bankRoll').html();
+    var oneHundred = 100;
+    $('#bankRoll').html(bankRoll + oneHundred);
+  },
+
   //Once bet is placed, this function will call first 4 cards in shuffled array
   dealCards: function() {
     //At the beginning of each hand, each card will have it's html cleared. This is different from resetGame so consecutive hands can be played.
@@ -122,17 +138,17 @@ const Gameplay = {
 
   //If player wishes to hold, this function will end player turn and begin dealer turn.
   hold: function() {
-    if (Gameplay.cards[1] + Gameplay.cards[3] < 20) {
+    if (Gameplay.cards[1] + Gameplay.cards[3] < 18) {
       $('#dealerCardThree').html(Gameplay.cards[7]);
       $('#dealerCardThree').removeClass("hidden");
       Gameplay.dealerCards.push(Gameplay.cards[7]);
 
-    } else if ((Gameplay.cards[1] + Gameplay.cards[3] + Gameplay.cards[7]) < 21) {
+    } if ((Gameplay.cards[1] + Gameplay.cards[3] + Gameplay.cards[7]) < 20) {
       $('#dealerCardFour').html(Gameplay.cards[8]);
       $('#dealerCardFour').removeClass("hidden");
       Gameplay.dealerCards.push(Gameplay.cards[8]);
 
-    } else if ((Gameplay.cards[1] + Gameplay.cards[3] + Gameplay.cards[7] + Gameplay.cards[8]) < 21) {
+    } if ((Gameplay.cards[1] + Gameplay.cards[3] + Gameplay.cards[7] + Gameplay.cards[8]) <= 21) {
       $('#dealerCardFive').html(Gameplay.cards[9]);
       $('#dealerCardFive').removeClass("hidden");
       Gameplay.dealerCards.push(Gameplay.cards[9]);
@@ -230,4 +246,4 @@ $('#hit').click(function() {
 $('#hold').click(function() {
   Gameplay.hold();
   Gameplay.checkForDealerVictory();
-})
+});
