@@ -113,7 +113,13 @@ const Gameplay = {
 
 //How the board changes based on Gameplay and flash messages
 const BoardEffect = {
+  flashMsg: function(msg) {
+    $('#flashMsg').html(msg);
+  },
 
+  clearMsg: function() {
+    $('flashMsg').html(null);
+  },
 };
 
 //Player control of board's features and in-game events

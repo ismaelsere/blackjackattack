@@ -162,3 +162,10 @@ img {
 .hidden {
   display: none;
 }
+
+#flashMsg {
+  position: relative;
+  bottom: 1000px;
+  left: 850px;
+  font-weight: bold;
+}
