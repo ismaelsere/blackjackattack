@@ -39,6 +39,11 @@ const Gameplay = {
     $('#dealerCardFour').html("");
     $('#playerCardFive').html("");
     $('#dealerCardFive').html("");
+    Gameplay.playerCards = [];
+    Gameplay.dealerCards = [];
+    BoardEffect.clearMsg();
+    BoardEffect.clearMsgPlayer();
+    BoardEffect.clearMsgDealer();
     console.log('Welcome!')
   },
 
@@ -79,6 +84,9 @@ const Gameplay = {
     $('#dealerCardFive').html("").addClass("hidden");
     Gameplay.playerCards = [];
     Gameplay.dealerCards = [];
+    BoardEffect.clearMsg();
+    BoardEffect.clearMsgPlayer();
+    BoardEffect.clearMsgDealer();
 
     $('#playerCardOne').html(Gameplay.cards[0]);
     $('#dealerCardOne').html(Gameplay.cards[1]);

@@ -13,7 +13,7 @@
     <div id="gameBoard" class="board">
       <img src="images/cards.jpg" alt="Playing Cards" id="cardsImg">
       <div class="dealerArea">
-          <h2 id="dealer" class ="participant">Dealer</h2>
+          <h2 id="dealer" class ="participant">Dealer Total: <span id="flashMsgDealer"></span></h2>
           <div class="dealerCards" id="dealerCardOne"></div>
           <div class="dealerCards" id="dealerCardTwo"></div>
           <div class="dealerCards hidden" id="dealerCardThree"></div>
@@ -28,7 +28,7 @@
         <button class ="buttonBet" id="bet100">Bet 100!</button>
       </div>
       <div class="playerArea">
-          <h2 id="player" class ="participant">Player</h2>
+          <h2 id="player" class ="participant">Player Total: <span id="flashMsgPlayer"></span></h2>
           <div class="playerCards" id="playerCardOne"></div>
           <div class="playerCards" id="playerCardTwo"></div>
           <div class="playerCards hidden" id="playerCardThree"></div>
@@ -41,9 +41,10 @@
       </div>
       <img src="images/chips.jpg" alt="Playing Cards" id="chipsImg">
       <h2 id='flashMsg'></h2>
-      <h2 id='flashMsgPlayer'></h2>
-      <h2 id='flashMsgDealer'></h2>
     </div>
+    <footer>
+      <p id="copyright">&copy; Matt Martinez</p>
+    </footer>
     <script src="scripts/script.js"></script>
   </body>
 </html>
