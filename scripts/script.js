@@ -13,14 +13,13 @@ $(document).ready(function() {
 //Begin game object for Blackjack Attack
 const Gameplay = {
 //Array of deck of cards
-//For testing purposes, only one suit will be included in deck
 //For testing, face cards will be replaced by their numerical values
 //                                    J   Q   K   A                               J   Q   K   A                               J   Q   K   A                               J   Q   K   A
   cards: [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11],
   playerCards: [],
   dealerCards: [],
   //Shuffle function
-  //Citation: Borrowed code from Marc's jQuery memory game solution
+  //Citation: Borrowed code from Marc's jQuery memory game solution.
   shuffle: function(arr) {
     for(var j, x, i = arr.length; i; j = Math.floor(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
     console.log('Shuffling Cards');
@@ -48,8 +47,6 @@ const Gameplay = {
   },
 
   //Below functions will allow player to place bet of their choice, subtracting from bank roll
-  //Will also add to bank roll if player wins hand
-
   betTwentyFive: function() {
     var bankRoll = $('#bankRoll').html();
     var twentyFive = 25;
@@ -65,7 +62,7 @@ const Gameplay = {
     var oneHundred = 100;
     $('#bankRoll').html(bankRoll - oneHundred);
   },
-
+//These functions are intended to add to the bankroll if the player wins hand.
   winTwentyFive: function () {
     var bankRoll = $('#bankRoll').html();
     var twentyFive = 25;
@@ -82,9 +79,9 @@ const Gameplay = {
     $('#bankRoll').html(bankRoll + oneHundred);
   },
 
-  //Once bet is placed, this function will call first 4 cards in shuffled array
   dealCards: function() {
     //At the beginning of each hand, each card will have it's html cleared. This is different from resetGame so consecutive hands can be played.
+    //Once bet is placed, this function will call first 4 cards in shuffled array
     //To simulate real blackjack, cards dealt will be alternated to diversify odds
     //Once cards are dealt, they will be added to the empty playerCards and dealerCards arrays for later use.
     //The playerCards and dealerCards arrays will also be cleared at the beginning of each hand
@@ -111,11 +108,12 @@ const Gameplay = {
     Gameplay.playerCards.push(Gameplay.cards[0], Gameplay.cards[2]);
     Gameplay.dealerCards.push(Gameplay.cards[1], Gameplay.cards[3]);
     console.log('Dealing Cards');
-    //Assigning Card Images to Card Values
+    //Below reserved for assigning card images to card values
 
   },
 
-  //If cards do not equal 21, player will call this function to deal next card value in array
+  //If cards do not equal 21, player will call this function to deal next card value in cards array
+  //This will also push the cards the player hits into the playerCards array
   hit: function() {
     if (Gameplay.cards[0] + Gameplay.cards[2] < 21) {
       $('#playerCardThree').html(Gameplay.cards[4]);
@@ -137,6 +135,8 @@ const Gameplay = {
   },
 
   //If player wishes to hold, this function will end player turn and begin dealer turn.
+  //Similar to the hit function, this function will run through the dealer's turn in order to reach 21.
+  //Cards taken from here will be added to dealerCards array.
   hold: function() {
     if (Gameplay.cards[1] + Gameplay.cards[3] < 18) {
       $('#dealerCardThree').html(Gameplay.cards[7]);
@@ -173,7 +173,7 @@ const Gameplay = {
     };
     console.log('Checking for winner.')
   },
-
+//This function will check for the dealer victory. I separated the functions to allow the hit/hold functions to retain their purpose.
   checkForDealerVictory: function() {
     var sumD = 0;
     for (i = 0; i < (Gameplay.dealerCards).length; i++) {
