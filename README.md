@@ -8,14 +8,14 @@ I started my project by creating user stories broken down into three main sectio
 
 After writing out my user stories, I decided to sketch out a wireframe of my project so I could visualize how to lay everything out.
 
-![Blackjack Mockup](../images/Blackjack-Mock-Up.jpg)
+![Blackjack Mockup](http://i.imgur.com/c5w5udv.jpg)
 
 Finally, I created check lists specific to each programming language so I could track my project progress and see how everything would build upon each other. My checklists can be found in the issues section of my repo as well.
 
 ###MVP Progress
 At the time of writing this README, I have successfully completed 4/6 MVP requirements with significant efforts made towards completing the final 2 requirements. My approach focused around creating a primary game loop where the player would bet an amount to receive cards, decide whether to hit or fold, and wait to see what cards the dealer holds. After the dealer's turn, the loop would end and the player would restart it by placing another bet. This approach helped shape my understanding of how the Javascript should be structured moving forward.
 
-![Final Layout](../images/Final-Layout.jpg)
+![Final Layout](http://i.imgur.com/PjO9JUk.jpg)
 
 
 ###Technical Challenges
@@ -34,4 +34,4 @@ At the time of writing, I still have the following aspects of my game to iron ou
 ###Conclusion
 I must emphasize how much fun I had during this project. It was a great learning experience and I am still blown away that I was able to produce the work that I currently have after just two weeks of learning. As the days continue, I plan on ironing out the unsolved problems I mentioned for my own personal benefit.
 
-![Blackjack!](../images/Blackjack.jpg)
+![Blackjack!](http://i.imgur.com/AAVfKfm.jpg)
