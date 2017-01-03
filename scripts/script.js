@@ -42,13 +42,23 @@ const Gameplay = {
     console.log('Welcome!')
   },
 
-  //Function to allow player to place bet, subtracting from bank roll
+  //Below functions will allow player to place bet of their choice, subtracting from bank roll
   //Will also add to bank roll if player wins hand
-  bet: function() {
 
-
-
-
+  betTwentyFive: function() {
+    var bankRoll = $('#bankRoll').html();
+    var twentyFive = 25;
+    $('#bankRoll').html(bankRoll - twentyFive);
+  },
+  betFifty: function() {
+    var bankRoll = $('#bankRoll').html();
+    var fifty = 50;
+    $('#bankRoll').html(bankRoll - fifty);
+  },
+  betOneHundred: function() {
+    var bankRoll = $('#bankRoll').html();
+    var oneHundred = 100;
+    $('#bankRoll').html(bankRoll - oneHundred);
   },
 
   //Once bet is placed, this function will call first 4 cards in shuffled array
@@ -133,36 +143,22 @@ const BoardEffect = {
 
 //Player control of board's features and in-game events
 const Controller = {
-  betTwentyFive: function() {
-    var bankRoll = $('#bankRoll').html();
-    var twentyFive = 25;
-    $('#bankRoll').html(bankRoll - twentyFive);
-  },
-  betFifty: function() {
-    var bankRoll = $('#bankRoll').html();
-    var fifty = 50;
-    $('#bankRoll').html(bankRoll - fifty);
-  },
-  betOneHundred: function() {
-    var bankRoll = $('#bankRoll').html();
-    var oneHundred = 100;
-    $('#bankRoll').html(bankRoll - oneHundred);
-  }
+
 };
 
 //Button Controls
 $('#bet25').click(function() {
-  Controller.betTwentyFive();
+  Gameplay.betTwentyFive();
   Gameplay.shuffle(Gameplay.cards);
   Gameplay.dealCards();
 });
 $('#bet50').click(function() {
-  Controller.betFifty();
+  Gameplay.betFifty();
   Gameplay.shuffle(Gameplay.cards);
   Gameplay.dealCards();
 });
 $('#bet100').click(function() {
-  Controller.betOneHundred();
+  Gameplay.betOneHundred();
   Gameplay.shuffle(Gameplay.cards);
   Gameplay.dealCards();
 });
