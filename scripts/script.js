@@ -33,12 +33,12 @@ const Gameplay = {
     $('#dealerCardOne').html("");
     $('#playerCardTwo').html("");
     $('#dealerCardTwo').html("");
-    $('#playerCardThree').html("");
-    $('#dealerCardThree').html("");
-    $('#playerCardFour').html("");
-    $('#dealerCardFour').html("");
-    $('#playerCardFive').html("");
-    $('#dealerCardFive').html("");
+    $('#playerCardThree').html("").addClass("hidden");
+    $('#dealerCardThree').html("").addClass("hidden");
+    $('#playerCardFour').html("").addClass("hidden");
+    $('#dealerCardFour').html("").addClass("hidden");
+    $('#playerCardFive').html("").addClass("hidden");
+    $('#dealerCardFive').html("").addClass("hidden");
     Gameplay.playerCards = [];
     Gameplay.dealerCards = [];
     BoardEffect.clearMsg();
@@ -68,7 +68,7 @@ const Gameplay = {
 
   //Once bet is placed, this function will call first 4 cards in shuffled array
   dealCards: function() {
-    //At the beginning of each hand, each card will have it's html cleared
+    //At the beginning of each hand, each card will have it's html cleared. This is different from resetGame so consecutive hands can be played.
     //To simulate real blackjack, cards dealt will be alternated to diversify odds
     //Once cards are dealt, they will be added to the empty playerCards and dealerCards arrays for later use.
     //The playerCards and dealerCards arrays will also be cleared at the beginning of each hand
