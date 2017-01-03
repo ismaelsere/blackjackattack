@@ -17,6 +17,8 @@ const Gameplay = {
 //For testing, face cards will be replaced by their numerical values
 //                                    J   Q   K   A                               J   Q   K   A                               J   Q   K   A                               J   Q   K   A
   cards: [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11],
+  playerCards: [],
+  dealerCards: [],
   //Shuffle function
   //Citation: Borrowed code from Marc's jQuery memory game solution
   shuffle: function(arr) {
@@ -101,11 +103,17 @@ const Gameplay = {
       $('#dealerCardFive').removeClass("hidden");
     };
     console.log('Hold!');
+    Gameplay.checkForVictory();
   },
 
   //This function will check to see if player card total is 21. If card total is over 21, player/dealer will "bust".
   checkForVictory: function() {
-
+    var playerCards = Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4] + Gameplay.cards[5] + Gameplay.cards[6];
+    if (playerCards <= 21) {
+      BoardEffect.flashMsg(`You win!`);
+    } else {
+      BoardEffect.flashMsg(`Bust! Try again?`);
+    }
   },
 
 //End of game object
@@ -113,6 +121,7 @@ const Gameplay = {
 
 //How the board changes based on Gameplay and flash messages
 const BoardEffect = {
+//Citation: I learned how to create flash messages from examining Matt's solution to the tic-tac-toe homework. The code below is based on what I learned.
   flashMsg: function(msg) {
     $('#flashMsg').html(msg);
   },
