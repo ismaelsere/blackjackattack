@@ -4,14 +4,18 @@
 For my unit 1 project, I decided to go with Blackjack. I have been a long time fan of the game, and I felt that my past experience would give me an edge as I planned out my HTML, CSS, and Javascript. Throughout this project, I found myself being challenged to piece my code together in more than one way in order to find a solution. This aspect of the project was invaluable to me, as I felt I thoroughly was able to grasp and begin to understand the concepts of each programming language. Admittedly, despite the fact that I did not accomplish all that I had hoped, I am proud of the work that I was able to produce.
 
 ###Planning Process
-I started my project by creating user stories broken down into three main sections: MVP, Recommended, and Advanced. My plan was to tackle the MVP requirements first in order to build out the main components of my game. Once I accomplished that, I planned to implement the Recommended and Advanced features to the best of my ability. Here are links to my User Stories.
+I started my project by creating user stories broken down into three main sections: MVP, Recommended, and Advanced. My plan was to tackle the MVP requirements first in order to build out the main components of my game. Once I accomplished that, I planned to implement the Recommended and Advanced features to the best of my ability. My User Stories can be found in the Issues tab of this repo.
 
-After writing out my user stories, I decided to sketch out a wireframe of my project so I could visualize how to lay everything out. A link to my mock-up can be found here.
+After writing out my user stories, I decided to sketch out a wireframe of my project so I could visualize how to lay everything out.
 
-Finally, I created check lists specific to each programming language so I could track my project progress and see how everything would build upon each other. My links to my checklists can be found here as well.
+![Blackjack Mockup](../images/Blackjack-Mock-Up.jpg)
+
+Finally, I created check lists specific to each programming language so I could track my project progress and see how everything would build upon each other. My checklists can be found in the issues section of my repo as well.
 
 ###MVP Progress
-At the time of writing this README, I have successfully completed 4/6 MVP requirements with significant efforts made towards completing the final 2 requirements. My approach focused around creating a primary game loop where the player would bet an amount to receive cards, decide whether to hit or fold, and wait to see what cards the dealer holds. After the dealer's turn, the loop would end and the player would restart it by placing another bet. This approach helped shape my understanding of how the Javascript should be structured moving forward. Below is a screenshot of my final game board.
+At the time of writing this README, I have successfully completed 4/6 MVP requirements with significant efforts made towards completing the final 2 requirements. My approach focused around creating a primary game loop where the player would bet an amount to receive cards, decide whether to hit or fold, and wait to see what cards the dealer holds. After the dealer's turn, the loop would end and the player would restart it by placing another bet. This approach helped shape my understanding of how the Javascript should be structured moving forward.
+
+![Final Layout](../images/Final-Layout.jpg)
 
 
 ###Technical Challenges
@@ -29,3 +33,5 @@ At the time of writing, I still have the following aspects of my game to iron ou
 
 ###Conclusion
 I must emphasize how much fun I had during this project. It was a great learning experience and I am still blown away that I was able to produce the work that I currently have after just two weeks of learning. As the days continue, I plan on ironing out the unsolved problems I mentioned for my own personal benefit.
+
+![Blackjack!](../images/Blackjack.jpg)
