@@ -170,3 +170,15 @@ img {
   left: 340px;
   font-weight: bold;
 }
+
+#flashMsgPlayer {
+  position: relative;
+  bottom: 620px;
+  left: 300px;
+}
+
+#flashMsgDealer {
+  position: relative;
+  bottom: 1000px;
+  left: 300px;
+}

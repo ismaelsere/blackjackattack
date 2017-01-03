@@ -86,8 +86,26 @@ const Gameplay = {
     $('#dealerCardTwo').html(Gameplay.cards[3]);
     Gameplay.playerCards.push(Gameplay.cards[0], Gameplay.cards[2]);
     Gameplay.dealerCards.push(Gameplay.cards[1], Gameplay.cards[3]);
+
+
     //Assigning Card Images to Card Values
 
+  },
+
+// Function to add up playerCards array and display to board
+  playerSum: function() {
+    var sumP = 0;
+    for (i = 0; i < (Gameplay.playerCards).length; i++) {
+      sumP += Gameplay.playerCards[i];
+    } BoardEffect.flashMsgPlayer(sumP);
+  },
+
+//Function to add up dealerCards array and display to board
+  dealerSum: function() {
+    var sumD = 0;
+    for (i = 0; i < (Gameplay.dealerCards).length; i++) {
+      sumD += Gameplay.dealerCards[i];
+    } BoardEffect.flashMsgDealer(sumD);
   },
 
   //If cards do not equal 21, player will call this function to deal next card value in array
@@ -146,8 +164,25 @@ const BoardEffect = {
   },
 
   clearMsg: function() {
-    $('flashMsg').html(null);
+    $('#flashMsg').html(null);
   },
+
+  flashMsgPlayer: function(msg) {
+    $('#flashMsgPlayer').html(msg);
+  },
+
+  clearMsgPlayer: function() {
+    $('#flashMsgPlayer').html(null);
+  },
+
+  flashMsgDealer: function(msg) {
+    $('#flashMsgDealer').html(msg);
+  },
+
+  clearMsgDealer: function() {
+    $('#flashMsgDealer').html(null);
+  },
+
 };
 
 //Player control of board's features and in-game events
@@ -160,6 +195,8 @@ $('#bet25').click(function() {
   Gameplay.betTwentyFive();
   Gameplay.shuffle(Gameplay.cards);
   Gameplay.dealCards();
+  Gameplay.playerSum();
+  Gameplay.dealerSum();
 });
 $('#bet50').click(function() {
   Gameplay.betFifty();
@@ -173,6 +210,7 @@ $('#bet100').click(function() {
 });
 $('#hit').click(function() {
   Gameplay.hit();
+  Gameplay.playerSum();
 });
 $('#hold').click(function() {
   Gameplay.hold();
