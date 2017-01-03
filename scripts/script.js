@@ -99,16 +99,6 @@ const Gameplay = {
 
   },
 
-// Function to add up playerCards array and display to board
-
-//Function to add up dealerCards array and display to board
-  dealerSum: function() {
-    var sumD = 0;
-    for (i = 0; i < (Gameplay.dealerCards).length; i++) {
-      sumD += Gameplay.dealerCards[i];
-    } BoardEffect.flashMsgDealer(sumD);
-  },
-
   //If cards do not equal 21, player will call this function to deal next card value in array
   hit: function() {
     if (Gameplay.cards[0] + Gameplay.cards[2] < 21) {
@@ -160,11 +150,24 @@ const Gameplay = {
 
     if (sumP === 21) {
       BoardEffect.flashMsg(`Blackjack!`);
-
     } else if (sumP > 21) {
-      BoardEffect.flashMsg('Bust!');
+      BoardEffect.flashMsg('Bust! Play Again?');
     } else {
       BoardEffect.flashMsg(`Hit?`);
+    };
+    console.log('Checking for winner.')
+  },
+
+  checkForDealerVictory: function() {
+    var sumD = 0;
+    for (i = 0; i < (Gameplay.dealerCards).length; i++) {
+      sumD += Gameplay.dealerCards[i];
+    } BoardEffect.flashMsgDealer(sumD);
+
+    if (sumD === 21) {
+      BoardEffect.flashMsg(`Dealer Wins! Play Again?`);
+    } else if (sumD > 21) {
+      BoardEffect.flashMsg(`Dealer Bust! You Win!`);
     };
     console.log('Checking for winner.')
   },
@@ -226,4 +229,5 @@ $('#hit').click(function() {
 });
 $('#hold').click(function() {
   Gameplay.hold();
+  Gameplay.checkForDealerVictory();
 })
