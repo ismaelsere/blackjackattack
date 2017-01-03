@@ -100,12 +100,6 @@ const Gameplay = {
   },
 
 // Function to add up playerCards array and display to board
-  playerSum: function() {
-    var sumP = 0;
-    for (i = 0; i < (Gameplay.playerCards).length; i++) {
-      sumP += Gameplay.playerCards[i];
-    } BoardEffect.flashMsgPlayer(sumP);
-  },
 
 //Function to add up dealerCards array and display to board
   dealerSum: function() {
@@ -121,19 +115,17 @@ const Gameplay = {
       $('#playerCardThree').html(Gameplay.cards[4]);
       $('#playerCardThree').removeClass("hidden");
       Gameplay.playerCards.push(Gameplay.cards[4]);
-      Gameplay.playerSum();
-      Gameplay.checkForVictory();
+
     } if ((Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4]) < 21) {
       $('#playerCardFour').html(Gameplay.cards[5]);
       $('#playerCardFour').removeClass("hidden");
       Gameplay.playerCards.push(Gameplay.cards[5]);
-      Gameplay.playerSum();
-      Gameplay.checkForVictory();
+
     } if ((Gameplay.cards[0] + Gameplay.cards[2] + Gameplay.cards[4] + Gameplay.cards[5]) < 21) {
       $('#playerCardFive').html(Gameplay.cards[6]);
       $('#playerCardFive').removeClass("hidden");
       Gameplay.playerCards.push(Gameplay.cards[6]);
-      Gameplay.playerSum;
+
     };
     console.log('Hit!');
   },
@@ -144,29 +136,32 @@ const Gameplay = {
       $('#dealerCardThree').html(Gameplay.cards[7]);
       $('#dealerCardThree').removeClass("hidden");
       Gameplay.dealerCards.push(Gameplay.cards[7]);
-      Gameplay.dealerSum();
-      Gameplay.checkForVictory();
+
     } else if ((Gameplay.cards[1] + Gameplay.cards[3] + Gameplay.cards[7]) < 21) {
       $('#dealerCardFour').html(Gameplay.cards[8]);
       $('#dealerCardFour').removeClass("hidden");
       Gameplay.dealerCards.push(Gameplay.cards[8]);
-      Gameplay.dealerSum();
-      Gameplay.checkForVictory();
+
     } else if ((Gameplay.cards[1] + Gameplay.cards[3] + Gameplay.cards[7] + Gameplay.cards[8]) < 21) {
       $('#dealerCardFive').html(Gameplay.cards[9]);
       $('#dealerCardFive').removeClass("hidden");
       Gameplay.dealerCards.push(Gameplay.cards[9]);
-      Gameplay.dealerSum();
-      Gameplay.checkForVictory();
+
     };
     console.log('Hold!');
   },
 
-  //This function will check to see if player card total is 21. If card total is over 21, player/dealer will "bust".
-  checkForVictory: function() {
-    if (Gameplay.playerSum(Gameplay.playerCards) === 21) {
+  //This function will check to see if player card total is 21. If card total is over 21, player will "bust".
+  checkForPlayerVictory: function() {
+      var sumP = 0;
+      for (i = 0; i < (Gameplay.playerCards).length; i++) {
+        sumP += Gameplay.playerCards[i];
+      } BoardEffect.flashMsgPlayer(sumP);
+
+    if (sumP === 21) {
       BoardEffect.flashMsg(`Blackjack!`);
-    } else if (Gameplay.playerSum(Gameplay.playerCards) > 21) {
+
+    } else if (sumP > 21) {
       BoardEffect.flashMsg('Bust!');
     } else {
       BoardEffect.flashMsg(`Hit?`);
@@ -185,7 +180,7 @@ const BoardEffect = {
   },
 
   clearMsg: function() {
-    $('#flashMsg').html(null);
+    $('#flashMsg').html("");
   },
 
   flashMsgPlayer: function(msg) {
@@ -211,24 +206,23 @@ $('#bet25').click(function() {
   Gameplay.betTwentyFive();
   Gameplay.shuffle(Gameplay.cards);
   Gameplay.dealCards();
-  Gameplay.playerSum();
-  Gameplay.dealerSum();
-  Gameplay.checkForVictory();
+  Gameplay.checkForPlayerVictory();
 });
 $('#bet50').click(function() {
   Gameplay.betFifty();
   Gameplay.shuffle(Gameplay.cards);
   Gameplay.dealCards();
+  Gameplay.checkForPlayerVictory();
 });
 $('#bet100').click(function() {
   Gameplay.betOneHundred();
   Gameplay.shuffle(Gameplay.cards);
   Gameplay.dealCards();
+  Gameplay.checkForPlayerVictory();
 });
 $('#hit').click(function() {
   Gameplay.hit();
-  Gameplay.playerSum();
-  Gameplay.checkForVictory();
+  Gameplay.checkForPlayerVictory();
 });
 $('#hold').click(function() {
   Gameplay.hold();
