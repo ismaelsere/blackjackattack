@@ -65,6 +65,8 @@ const Gameplay = {
   dealCards: function() {
     //At the beginning of each hand, each card will have it's html cleared
     //To simulate real blackjack, cards dealt will be alternated to diversify odds
+    //Once cards are dealt, they will be added to the empty playerCards and dealerCards arrays for later use.
+    //The playerCards and dealerCards arrays will also be cleared at the beginning of each hand
     $('#playerCardOne').html("");
     $('#dealerCardOne').html("");
     $('#playerCardTwo').html("");
@@ -75,17 +77,24 @@ const Gameplay = {
     $('#dealerCardFour').html("").addClass("hidden");
     $('#playerCardFive').html("").addClass("hidden");
     $('#dealerCardFive').html("").addClass("hidden");
+    Gameplay.playerCards = [];
+    Gameplay.dealerCards = [];
 
     $('#playerCardOne').html(Gameplay.cards[0]);
     $('#dealerCardOne').html(Gameplay.cards[1]);
     $('#playerCardTwo').html(Gameplay.cards[2]);
     $('#dealerCardTwo').html(Gameplay.cards[3]);
+    Gameplay.playerCards.push(Gameplay.cards[0], Gameplay.cards[2]);
+    Gameplay.dealerCards.push(Gameplay.cards[1], Gameplay.cards[3]);
     //Assigning Card Images to Card Values
 
   },
 
   //If cards do not equal 21, player will call this function to deal next card value in array
   hit: function() {
+
+
+
 
     if (Gameplay.cards[0] + Gameplay.cards[2] < 21) {
       $('#playerCardThree').html(Gameplay.cards[4]);
